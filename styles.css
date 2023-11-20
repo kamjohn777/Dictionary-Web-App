@@ -134,3 +134,41 @@ li {
 .synonyms a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+.pronunciation {
+    font-size: 24px;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+.part-of-speech h2 {
+    font-size: 32px;
+    color: #333;
+    margin-top: 20px; 
+    border-bottom: 2px solid #333; 
+    display: inline-block; 
+}
+
+
+.synonyms {
+    margin-top: 20px; 
+}
+
+.synonyms p {
+    font-weight: bold;
+}
+
+.synonyms a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.synonyms a:hover {
+    text-decoration: underline;
+}
