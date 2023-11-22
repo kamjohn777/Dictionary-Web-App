@@ -27,18 +27,26 @@ function fetchWordDefinition(word) {
             updateWordOnBrowser(word); 
             updateDefinitionsOnBrowser(data[0].meanings);
             updatePhoneticsOnBrowser(data[0].phonetics[0] && data[0].phonetics[0].text ? data[0].phonetics[0].text : '');
+
+              // Handle synonyms if they exist
+              const synonyms = data[0].meanings[0].synonyms; // Assuming synonyms are in the first meaning
+              if (synonyms) {
+                  updateSynonymsOnBrowser(synonyms);
+              } else {
+                  updateSynonymsOnBrowser([]); // Pass empty array if no synonyms
+              }
         } else {
             throw new Error('No meanings found for this word.')
         }
      })
     //  .then((data) => updateDefinitionsOnBrowser(data[0].meanings))
      .catch((error) => console.error('Fetch error:', error))
-     updateWordOnBrowser(''); // Clear the word
+            updateWordOnBrowser(''); // Clear the word
             updatePhoneticsOnBrowser(''); // Clear the phonetics
             updateDefinitionsOnBrowser([]); // Clear definitions
 }
 
-fetchWordDefinition();
+fetchWordDefinition('Dictionary');
 
 function updatePhoneticsOnBrowser(phoneticText) {
     const pronunciationElement = document.querySelector('.pronunciation');
@@ -77,6 +85,15 @@ function updateDefinitionsOnBrowser(meanings) {
 // we're passing an empty array as an argument because we're using the forEach method and this method can only be used for arrays before i tried passing a string and it gave me an error because forEach can only be used with arrays 
 updateDefinitionsOnBrowser([]);
 console.log(updateDefinitionsOnBrowser([]));
+
+// New function to update synonyms
+function updateSynonymsOnBrowser(synonyms) {
+    const synonymsElement = document.querySelector('.synonyms');
+    const synonymsList = synonyms.map(synonym => `<a href="#" onclick="fetchWordDefinition('${synonym}'); return false;">${synonym}</a>`).join(', ');
+
+    // If there are synonyms, create a list; if not, display a message or leave it empty
+    synonymsElement.innerHTML = synonymsList.length > 0 ? synonymsList : 'No synonyms available.';
+}
 
 
 // Event listener for the input field
