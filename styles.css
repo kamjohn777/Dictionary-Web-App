@@ -18,6 +18,42 @@
     align-items: center;
 }
 
+/* menu settings */
+/* Base styles */
+body {
+    font-family: 'Serif', serif; /* Default font */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Light theme styles */
+body.light-mode {
+    background-color: #fff; /* Light background */
+    color: #000; /* Dark text for light background */
+}
+
+/* Dark theme styles */
+body.dark-mode {
+    background-color: #1b1b1b; /* Dark background */
+    color: #fff; /* Light text for dark background */
+}
+
+.container.dark-mode {
+    background-color: #333; /* Dark background for the container */
+    color: #ffffff; /* White text color for the container */
+}
+
+.word.dark-mode, .pronunciation.dark-mode {
+    color: #ffffff; /* White text color for the word and pronunciation */
+}
+
+
+/* Settings styles */
+.settings {
+    /* Add your styles for the settings container */
+}
+
+/* end of menu settings */
+
 
 .search-container {
     display: flex;
@@ -53,7 +89,7 @@
 }
 
 #searchButton svg {
-    fill: #333; /* Color of the icon */
+    fill: #9949ff; /* Color of the icon */
 }
 
 /* Placeholder styling */
@@ -187,12 +223,16 @@ li {
     margin-bottom: 5px;
 }
 
+.synonyms {
+    margin-top: 20px; 
+}
+
 .synonyms p {
     font-weight: bold;
 }
 
 .synonyms a {
-    color: #0077cc;
+    color: #9949ff;
     text-decoration: none;
     font-weight: normal;
 }
@@ -211,20 +251,10 @@ li {
     margin-top: 10px;
 }
 
-.synonyms {
-    margin-top: 20px; 
-}
 
 .synonyms p {
     font-weight: bold;
 }
 
-.synonyms a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: normal;
-}
 
-.synonyms a:hover {
-    text-decoration: underline;
-}
+
