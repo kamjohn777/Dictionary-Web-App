@@ -33,23 +33,35 @@ body.light-mode {
 
 /* Dark theme styles */
 body.dark-mode {
-    background-color: #1b1b1b; /* Dark background */
-    color: #fff; /* Light text for dark background */
+    background-color: #1b1b1b;
+    color: #fff;
 }
 
 .container.dark-mode {
-    background-color: #333; /* Dark background for the container */
-    color: #ffffff; /* White text color for the container */
+    background-color: #333; 
+    color: #ffffff; 
 }
 
 .word.dark-mode, .pronunciation.dark-mode {
-    color: #ffffff; /* White text color for the word and pronunciation */
+    color: #ffffff;
 }
 
 
 /* Settings styles */
 .settings {
-    /* Add your styles for the settings container */
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
 }
 
 /* end of menu settings */
@@ -75,7 +87,7 @@ body.dark-mode {
     width: 100%;
     padding: 10px;
     background-color: #f5f5f5;
-    font-family: 'Serif', serif; /* Replace 'Serif' with the actual font you want to use */
+    font-family: 'Serif', serif;
     color: #333;
 }
 
@@ -89,7 +101,7 @@ body.dark-mode {
 }
 
 #searchButton svg {
-    fill: #9949ff; /* Color of the icon */
+    fill: #9949ff;
 }
 
 /* Placeholder styling */
