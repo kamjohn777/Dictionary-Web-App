@@ -55,6 +55,7 @@ function toggleTheme() {
     const containerElement = document.querySelector('.container');
     const wordElement = document.querySelector('.word');
     const pronunciationElement = document.querySelector('.pronunciation');
+    const selectFont = document.getElementById('#fontSelect');
 
   // Toggle classes for body
   bodyElement.classList.toggle('dark-mode');
@@ -67,6 +68,13 @@ function toggleTheme() {
   wordElement.classList.toggle('light-mode');
   pronunciationElement.classList.toggle('dark-mode');
   pronunciationElement.classList.toggle('light-mode');
+
+if( bodyElement.classList.contains('dark-mode')) {
+    selectFont.classList.add('white-text');
+} else {
+    selectFont.classList.remove('white-text');
+}
+  
 }
 
 // Initial theme setup

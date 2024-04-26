@@ -56,12 +56,20 @@ body.dark-mode {
     width: 70%;
     justify-content: space-between;
     gap: 15px;
+    margin-top: 20px;
 }
 
 select {
-    background-color: transparent;
+    /* background-color: transparent; */
+    /* background: white;
     border: none;
-    padding: 5px;
+    padding: 5px; */
+    /* background: white; */
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    background: #e0e1e2 none;
+    color: rgba(0, 0, 0, .6);
 }
 
 /* end of menu settings */
@@ -254,7 +262,10 @@ li {
 }
 
 
-
+#toggleThemeButton {
+    border-radius: 25px;
+    margin-left: 15px;
+}
 
 
 .pronunciation {
@@ -268,5 +279,7 @@ li {
     font-weight: bold;
 }
 
-
+.white-text {
+    color: white;
+}
 

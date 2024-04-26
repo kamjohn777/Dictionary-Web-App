@@ -7,11 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" href="./styles.css">
     <title>Dictionary Web App</title>
 </head>
 <body>
     <!-- code for settings menu -->
+    <!-- Put in API projects -->
     <div class="settings">
         <button id="menuButton">
             <i class="fa-solid fa-book"></i>
@@ -23,7 +25,8 @@
             <option value="sans-serif">Sans-serif</option>
             <!-- Add more font options as needed -->
         </select>
-        <button id="toggleThemeButton">Toggle Theme</button>
+        <!-- <button id="toggleThemeButton">Toggle Theme</button> -->
+        <button id="toggleThemeButton" class="ui toggle button">Toggle Theme</button>
         </div>
     </div>
     
@@ -84,5 +87,6 @@
 
    
     <script src="./main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 </body>
 </html>
